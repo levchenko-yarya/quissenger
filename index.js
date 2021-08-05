@@ -1,11 +1,19 @@
+require('dotenv').config()
+
 const express = require('express')
-
 const app = express()
+const server = require('http').createServer(app)
+const { Server } = require('socket.io')
+const io = new Server(server)
 
-app.get('/', (req, res) => {
-    res.send('Quissenger real-time chat')
+io.on('connection', (socket) => {
+    console.log('a user connected')
 })
 
-app.listen(process.env.PORT, ()=> {
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+})
+
+server.listen(process.env.PORT, () => {
     console.log('server is running... ')
 })
