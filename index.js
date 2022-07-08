@@ -8,7 +8,7 @@ const io = new Server(server)
 
 io.on('connection', (socket) => {
     console.log('a user connected')
-    socket.on('chat message', (msg)=> {
+    socket.on('chat message', (msg) => {
 
         io.emit('chat message', msg)
 
@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-server.listen(process.env.PORT, () => {
+server.listen(process.env.PORT || 3000, () => {
     console.log('server is running... ')
 })
