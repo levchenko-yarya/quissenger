@@ -1,28 +1,54 @@
 {
   "name": "quissenger",
   "version": "1.0.0",
-  "description": "web app real-time chat",
-  "main": "index.js",
+  "description": "web applcation real-time chat",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/levchenko-yarya/quissenger.git"
   },
-  "author": "Levchenko",
+  "author": "ry6n1k",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/levchenko-yarya/quissenger/issues"
   },
   "homepage": "https://github.com/levchenko-yarya/quissenger#readme",
   "dependencies": {
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1",
-    "socket.io": "^4.1.3"
+    "core-js": "^3.23.4",
+    "socket.io-client": "^4.5.1",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "nodemon": "^2.0.12"
-  }
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.19.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "vue-template-compiler": "^2.7.4"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
