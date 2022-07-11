@@ -1,12 +1,17 @@
 <template>
   <div>
     <div class="header">
-      <status/>
+      <status-icon :connected="user.connected"/>
+      {{ user.username }}
     </div>
 
     <ul class="messages">
-      <li>
-        <div class="sender">
+      <li
+          v-for="(message, index) in user.message"
+          :key="index"
+          class="message"
+      >
+        <div v-if="displaySender(message,index)" class="sender">
           {{ message.fromSelf ? "(yourself)" : user.username }}
         </div>
         {{ message.content }}
@@ -21,7 +26,7 @@
 </template>
 
 <script>
-import StatusIcon from "./StatusIcon"
+import StatusIcon from "@/components/StatusIcon"
 
 export default {
   name: "MessagePanel",

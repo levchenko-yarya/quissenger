@@ -20,8 +20,8 @@
 
 <script>
 import socket from "../socket";
-import User from "./User"
-import MessagePanel from "./MessagePanel ";
+import User from "@/components/User"
+import MessagePanel from "@/components/MessagePanel ";
 
 export default {
   name: "Chat",
@@ -58,6 +58,7 @@ export default {
         }
       })
     })
+
     socket.on("disconnect", () => {
       this.users.forEach((user) => {
         if (user.self) {
@@ -65,11 +66,13 @@ export default {
         }
       })
     })
+
     const initReactiveProperties = (user) => {
       user.connected = true
       user.messages = []
       user.hasNewMessages = false
     }
+
     socket.on("users", (users) => {
       users.forEach((user) => {
         user.self = user.userID === socket.id
@@ -82,10 +85,12 @@ export default {
         return a.username > b.username ? 1 : 0;
       })
     })
+
     socket.on("user connected", (user) => {
       initReactiveProperties(user)
       this.users.push(user)
     })
+
     socket.on("user disconnected", (id) => {
       for (let i = 0; i < this.users.length; i++) {
         const user = this.users[i]
@@ -95,6 +100,7 @@ export default {
         }
       }
     })
+
     socket.on("private message", ({content, from}) => {
       for (let i = 0; i < this.users.length; i++) {
         const user = this.users[i]
@@ -123,6 +129,7 @@ export default {
 </script>
 
 <style scoped>
+
 .left-panel {
   position: fixed;
   left: 0;

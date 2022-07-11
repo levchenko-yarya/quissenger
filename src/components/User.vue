@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import StatusIcon from "./StatusIcon"
+import StatusIcon from "@/components/StatusIcon"
 
 export default {
   name: "User",
@@ -37,7 +37,29 @@ export default {
 </script>
 
 <style scoped>
-.selecred{
+.selected {
   backdrop-color: #1164a3;;
+}
+
+.user {
+  padding: 10px;
+}
+
+.description {
+  display: inline-block;
+}
+
+.status {
+  color: #92959e
+}
+
+.new-messages {
+  color: white;
+  background-color: red;
+  width: 20px;
+  border-radius: 5px;
+  text-align: center;
+  float: right;
+  margin-top: 10px;
 }
 </style>
