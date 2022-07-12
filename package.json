@@ -24,27 +24,9 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.18.2",
     "@vue/cli-plugin-babel": "^5.0.8",
-    "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-service": "^5.0.8",
-    "eslint": "^8.19.0",
-    "eslint-plugin-vue": "^9.2.0",
     "vue-template-compiler": "^2.7.4"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    },
-    "rules": {}
   },
   "browserslist": [
     "> 1%",

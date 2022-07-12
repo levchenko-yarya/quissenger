@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import StatusIcon from "@/components/StatusIcon"
+import StatusIcon from "./StatusIcon"
 
 export default {
   name: "User",
@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 .selected {
-  backdrop-color: #1164a3;;
+  background-color: #1164a3;;
 }
 
 .user {

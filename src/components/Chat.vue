@@ -20,8 +20,8 @@
 
 <script>
 import socket from "../socket";
-import User from "@/components/User"
-import MessagePanel from "@/components/MessagePanel ";
+import User from "./User"
+import MessagePanel from "./MessagePanel";
 
 export default {
   name: "Chat",

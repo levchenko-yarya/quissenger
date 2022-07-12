@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import StatusIcon from "@/components/StatusIcon"
+import StatusIcon from "./StatusIcon"
 
 export default {
   name: "MessagePanel",

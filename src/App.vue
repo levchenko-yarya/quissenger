@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import SelectUsername from "@/components/SelectUsername";
-import Chat from "@/components/Chat";
+import SelectUsername from "./components/SelectUsername";
+import Chat from "./components/Chat";
 import socket from "./socket";
 
 export default {
@@ -46,10 +46,6 @@ export default {
 <style>
 body {
   margin: 0;
-}
-
-@font-face {
-  font-family: "Book Antiqua"
 }
 
 #app {

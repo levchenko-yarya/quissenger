@@ -1,7 +1,7 @@
 const httpServer = require('http').createServer()
 const io = require('socket.io')(httpServer, {
     cors: {
-        origin: "http://localhost:3000"
+        origin: "http://localhost:8080"
     }
 })
 
@@ -29,7 +29,7 @@ io.on("connection", (socket) => {
         username: socket.username
     })
 
-    socket.io("private message", ({ content, to }) => {
+    socket.on("private message", ({ content, to }) => {
         socket.to(to).emit('private message', {
             content,
             from: socket.id
